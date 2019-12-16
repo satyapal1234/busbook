@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BUS BOOK</title>
+	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Googlefont-->
+   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+     <!--font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="/styles.css">
+    
+
+    <style>
+        #sup
+        {
+            padding: 10px 20px;
+        }
+         label 
+         {
+           display: inline-block;
+           width: 340px;
+
+          }​
+    </style>
+</head>
+
+<body>
+    
+    <section>
+   <div class="container"  >
+       <nav class="navbar navbar-expand-lg navbar-light  " >
+            <img id="ig" src="logo.png" style="height: 75px;border-radius: 50%;">
+                <a class="navbar-brand" href="#" style="font-size:2.0rem; color:white;font-family: coiny;" >Welcome Superadmin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo2">
+                 <span class="navbar-toggler-icon"></span>
+                 </button>
+                  
+                   </nav>
+     </div>
+
+
+</section>
+
+
+
+
+
+
+<section id='proc'>
+    <div class='process'>
+        <div class='row'>
+            <div class='col-lg-2' style='margin-top:30px;'>
+                <div style='color:white;margin-left: 20px;font-family: Courier New;font-weight: bold;'>
+                    <h6 id='sup'>Dashboard</h6>
+                    <h6 id='sup' onclick="customer()">Customer</h6>
+                    <h6 id='sup' onclick="cabbook()">Subscribed</h6>
+                    <h6 id='sup'  onclick="operator()">Operator</h6>
+                    <h6 id='sup'>Report Issue</h6>
+                    <h6 id='sup' onclick='addnew()'>Add New</h6>
+                    <h6 id='sup' onclick='bus()'>Buses List</h6>
+                    <h6 id='sup'  onclick="booking()">Bookings</h6>
+                </div>
+            </div>
+
+            <div class='col-lg-10' style='margin-top:30px;background-color:rgb(255, 255, 204);padding: 42px 17px;'>
+                <div class='row' id='row'>
+                    <div class='col-lg-4'>
+                        <center><div class="" style="width: 15rem;background-color:rgb(255, 255, 204)">
+                                 <div class="card-body">
+                                      <center><img src='user.png' class='img-fluid' style="width: 100px;height: 100px;border-radius: 50%;">
+                                        <h4 style='font-weight: bold;font-family: Courier New;' onclick="customer()">Customers</h4>
+                                      </center>
+                                 </div>
+                        </div></center>
+                    </div>
+
+                     <div class='col-lg-4'>
+                        <center><div class="" style="width: 15rem;background-color:rgb(255, 255, 204)">
+                                 <div class="card-body">
+                                      <center><img src='booking.jpg' class='img-fluid' style="width: 100px;height: 100px;border-radius: 50%;">
+                                        <h4 style='font-weight: bold;font-family: Courier New;' onclick="booking()">BOOKINGS</h4>
+                                      </center>
+                                 </div>
+                        </div></center> 
+                    </div>
+
+                     <div class='col-lg-4'>
+                        <center><div class="" style="width: 15rem;background-color:rgb(255, 255, 204)">
+                                 <div class="card-body">
+                                      <center><img src='buses.png' class='img-fluid' style="width: 100px;height: 100px;border-radius: 50%;">
+                                        <h4 style='font-weight: bold;font-family: Courier New;' onclick='bus()'>BUSES</h4>
+                                      </center>
+                                 </div>
+                        </div></center> 
+                    </div>
+                </div></br>
+
+
+
+
+
+                <div class='row' id='row2'>
+                    <div class='col-lg-4' >
+                        <center><div class="" style="width: 15rem;background-color:rgb(255, 255, 204)">
+                                 <div class="card-body">
+                                      <center><img src='mail.png' class='img-fluid' style="width: 100px;height: 100px;border-radius: 50%;">
+                                        <h4 style='font-weight: bold;font-family: Courier New;' onclick="cabbook()">CabBook</h4>
+                                      </center>
+                                 </div>
+                        </div></center>
+                    </div></br></br>
+
+                     <div class='col-lg-4'>
+                        <center><div class="" style="width: 15rem;background-color:rgb(255, 255, 204)">
+                                 <div class="card-body">
+                                      <center><img src='add.png' class='img-fluid' style="width: 100px;height: 100px;border-radius: 50%;">
+                                        <h4 style='font-weight: bold;font-family: Courier New;' onclick='addnew()'>ADD NEW</h4>
+                                      </center>
+                                 </div>
+                        </div></center> 
+                    </div>
+
+                     <div class='col-lg-4'>
+                        <center><div class="" style="width: 15rem;background-color:rgb(255, 255, 204)">
+                                 <div class="card-body">
+                                      <center><img src='routes.jpg' class='img-fluid' style="width: 100px;height: 100px;border-radius: 50%;">
+                                        <h4 style='font-weight: bold;font-family: Courier New;' onclick="operator()">OPERATORS</h4>
+                                      </center>
+                                 </div>
+                        </div></center> 
+                    </div>
+                </div>
+
+
+
+                
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id='customer'  style='margin-top:20px;'>
+    <div class='row'>
+        
+           
+        <div class='col-lg-3' style="margin-top: 30px;">
+            <center><img src='custm.png' class='img-fluid' style='width:200px;height: 200px;border-radius: 50%;border:1px solid white;padding: 20px 20px'></center>
+        </div>
+        <div class='col-lg-9'>
+            <div style='text-align: center;color:white;font-family: Courier New;font-weight: bold;font-size: 20px;'>Customer Data Are:-</div>
+            <table class='table'  style='color:white'>
+                 <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                  
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>Rand</th>
+                </tr>
+             <tbody>
+               <% for(var i=0;i<foundlist.length;i++) {%>
+                <tr>
+                    <td><%= foundlist[i].username %></td>
+                    <td><%= foundlist[i].email %></td>
+                  
+                    <td><%= foundlist[i].password %></td>
+                    <td><%= foundlist[i].address %></td>
+                    <td><%= foundlist[i].rand %></td>
+               </tr>
+              <% }%>
+            </tbody>
+          </table>
+    
+        </div>
+    </div>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id='bus' style='margin-top: 40px'>
+  <div class='row'>
+     <div class='col-lg-3' style="margin-top: 70px;">
+            <center><img src='bus3.jpg' class='img-fluid' style='border-radius: 50%;width: 150px;height: 150px;'></center>
+        </div>
+        <div class='col-lg-9'>
+            <div style='text-align: center;color:white;font-family: Courier New;font-weight: bold;font-size: 20px;'>Buse List Are:-</div>
+            <table class='table'  style='color:white;font-family: Courier New;'>
+                 <tr>
+                    <th>Busname</th>
+                    <th>Email</th>
+                  
+                    <th>Contact</th>
+                    <th>Bus No</th>
+                    <th>Location</th>
+                </tr>
+             <tbody>
+               
+                <tr>
+                    <td>Prince Travel</td>
+                    <td>princetravel@gmail.com</td>
+                  
+                    <td>1234567890</td>
+                    <td>raja chowk dalmanddi gujrat</td>
+                    <td>Gujrat</td>
+               </tr>
+                <tr>
+                    <td>Nillanchal Travel</td>
+                    <td>nilanchaltravel@gmail.com</td>
+                  
+                    <td>1234567890</td>
+                    <td>rani chowk dalmanddi uttarprades</td>
+                    <td>Uttarpradesh</td>
+               </tr>
+               
+                 <tr>
+                    <td>Maharaja Travel</td>
+                    <td>mahrajaltravel@gmail.com</td>
+                  
+                    <td>90834567890</td>
+                    <td>Kalinga Chowk  shine road buxar</td>
+                    <td>Bihar</td>
+               </tr>
+                <tr>
+                    <td>Ratnagiri Travel</td>
+                    <td>ratnagiritravel@gmail.com</td>
+                  
+                    <td>70034567890</td>
+                    <td>Rajmantra Chowk  shine road buxar</td>
+                    <td>Bihar</td>
+               </tr>
+            </tbody>
+          </table>
+    
+        </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<section id='booking'  style='margin-top:20px;'>
+    <div class='row'>
+        
+           
+        <div class='col-lg-3' style="margin-top: 30px;">
+            <center><img src='booking2.jpg' class='img-fluid' style='height: 200px;width:200px;border-radius: 50%;'></center>
+        </div>
+        <div class='col-lg-9'>
+            <div style='text-align: center;color:white;font-family: Courier New;font-weight: bold;font-size: 20px;'>Booking Status Are:-</div>
+            <table class='table'  style='color:white;display: block;
+        overflow-x: auto;
+        white-space: nowrap;'>
+                 <tr>
+                    <th>Booker_Name</th>
+                    <th>Booker_Contact</th>
+                  
+                    <th>Arriving_Date</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Sleeper</th>
+                  
+                    <th>Non_WindowSeat</th>
+                    <th>Window_Seat</th>
+                    <th>Mode</th>
+                    <th>Payable Amount</th>
+                    <th>Payment_ID</th>
+                    <th>Payment_Status</th>
+                    <th>busname</th>
+                </tr>
+                
+             <tbody>
+               <% for(var i=0;i<foundlist2.length;i++) {%>
+                <tr>
+                    <td><%= foundlist2[i].booker_name %></td>
+
+                    <td><%= foundlist2[i].booker_contact %></td>
+                  
+                    <td><%= foundlist2[i].booking_date %></td>
+                    <td><%= foundlist2[i].from %></td>
+                    <td><%= foundlist2[i].to %></td>
+                    <td><%= foundlist2[i].sleeper %></td>
+                    <td><%= foundlist2[i].nonWindowSeat %></td>
+                  
+                    <td><%= foundlist2[i].windowSeat %></td>
+                    <td><%= foundlist2[i].mode %></td>
+                    <td><%= foundlist2[i].AmountPayable %></td>
+                    <td><%= foundlist2[i].payment_id %></td>
+                    <td><%= foundlist2[i].payment_status %></td>
+                    <td><%= foundlist2[i].busname %></td>
+               </tr>
+              <% }%>
+            </tbody>
+          </table>
+    
+        </div>
+    </div>
+  
+</section>
+
+
+
+
+
+
+
+
+
+<section id='addnew'>
+    <div class='row'>
+            <div class='col-lg-2' style='margin-top:30px;'>
+                <div style='color:white;margin-left: 20px;font-family: Courier New;font-weight: bold;'>
+                    <h6 id='sup'>Dashboard</h6>
+                    <h6 id='sup' onclick="customer()">Customer</h6>
+                    <h6 id='sup'>Subscribed</h6>
+                    <h6 id='sup'>Routes</h6>
+                    <h6 id='sup'>Report Issue</h6>
+                    <h6 id='sup' onclick='addnew()'>Add New</h6>
+                    <h6 id='sup' onclick='bus()'>Buses List</h6>
+                    <h6 id='sup'  onclick="booking()">Bookings</h6>
+                </div>
+            </div>
+
+            <div class='col-lg-10' style='background-color:rgb(255, 153, 0);margin-top:40px;'>
+                 <div class='add-head-head'>Add New Operator</div></br>
+                 <div id='form'>
+                     <center>
+                        <form class='form-signin' action='/addOperator' method='post'>
+                         <label for="operatorname" style='font-weight: bold;'><i class="fa fa-user icon" style="color:red;background-color:rgb(255, 153, 0) "></i> Operator Name</label>
+                          <input type="text" name="operatorname" id='operatorname' style='width: 60%' required autofocus></br>
+
+                          <label for="email" style='font-weight: bold;'><i class="fa fa-envelope icon" style="color:red;background-color:rgb(255, 153, 0) "></i> Operator Email</label>
+                          <input type="text" name="email" id='email' style='width: 60%' required autofocus></br>
+
+                          <label for="contact" style='font-weight: bold;'><i class="fa fa-phone icon" style="color:red;background-color:rgb(255, 153, 0) "></i> Operator Contact</label>
+                          <input type="text" name="phone" id='phone' style='width: 60%' required autofocus></br>
+
+                          <label for="busname" style='font-weight: bold;'><i class="fa fa-address-book icon" style="color:red;background-color:rgb(255, 153, 0) "></i> Operator Bus</label>
+                          <input type="text" name="bus" id='bus' style='width: 60%' required autofocus></br>
+
+                          <label for="address" style='font-weight: bold;'><i class="fa fa-address-book icon" style="color:red;background-color:rgb(255, 153, 0) "></i> Operator Address</label>
+                          <input type="text" name="address" id='address' style='width: 60%' required autofocus></br>
+
+                          <label for="address" style='font-weight: bold;'><i class="fa fa-key icon" style="color:red;background-color:rgb(255, 153, 0) "></i> Operator Password</label>
+                          <input type="text" name="password" id='password' style='width: 60%' required autofocus></br>
+
+                          <center><button class='btn btn-danger' style='background-color: red;padding:5px 40px;font-weight: bold;border-radius: 20px;'>Add Now</button></center>
+                     </form></center>
+                 </div>
+            </div>
+     </div>       
+   
+    
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id='operator' style='margin-top: 30px;'>
+    <div class='row'>
+        
+           
+        <div class='col-lg-3' style="margin-top: 30px;">
+            <center><img src='custm.png' class='img-fluid' style='width:200px;height: 200px;border-radius: 50%;border:1px solid white;padding: 20px 20px'></center>
+        </div>
+        <div class='col-lg-9'>
+            <div style='text-align: center;color:white;font-family: Courier New;font-weight: bold;font-size: 20px;'>Operators Data Are:-</div>
+            <table class='table'  style='color:white'>
+                 <tr>
+                    <th>Operator Name</th>
+                    <th>Email</th>
+                  
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>Bus</th>
+                </tr>
+             <tbody>
+               <% for(var i=0;i<foundlist3.length;i++) {%>
+                <tr>
+                    <td><%= foundlist3[i].operatorname %></td>
+                    <td><%= foundlist3[i].email %></td>
+                  
+                    <td><%= foundlist3[i].password %></td>
+                    <td><%= foundlist3[i].address %></td>
+                    <td><%= foundlist3[i].contact %></td>
+                    <td><%= foundlist3[i].bus %></td>
+               </tr>
+              <% }%>
+            </tbody>
+          </table>
+    
+        </div>
+    </div>
+  
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="cab">
+    <div class='row'>
+        
+           
+        <div class='col-lg-3' style="margin-top: 30px;">
+            <center><img src='booking2.jpg' class='img-fluid' style='height: 200px;width:200px;border-radius: 50%;'></center>
+        </div>
+        <div class='col-lg-9'>
+            <div style='text-align: center;color:white;font-family: Courier New;font-weight: bold;font-size: 20px;'>Booking Status Are:-</div>
+            <table class='table'  style='color:white;display: block;
+        overflow-x: auto;
+        white-space: nowrap;'>
+                 <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                  
+                    <th>From</th>
+                   
+                    <th>To</th>
+                    <th>Date</th>
+                  
+                    <th>Time</th>
+                    <th>Payment_Id</th>
+                    <th>Payment_Status</th>
+                    
+                    <th>Email</th>
+                </tr>
+                
+             <tbody>
+               <% for(var i=0;i<foundlist4.length;i++) {%>
+                <tr>
+                    <td><%= foundlist4[i].name %></td>
+
+                    <td><%= foundlist4[i].contact %></td>
+                  
+                    <td><%= foundlist4[i].from %></td>
+                    <td><%= foundlist4[i].to %></td>
+                    <td><%= foundlist4[i].date %></td>
+                    <td><%= foundlist4[i].time %></td>
+                  
+                    <td><%= foundlist4[i].payment_id %></td>
+                    
+                    <td><%= foundlist4[i].payment_status %></td>
+                    <td><%= foundlist4[i].email %></td>
+               </tr>
+              <% }%>
+            </tbody>
+          </table>
+    
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+        document.getElementById("proc").style.display='block';
+        document.getElementById("customer").style.display='none';
+        document.getElementById("bus").style.display='none';
+        document.getElementById("booking").style.display='none';
+        document.getElementById("addnew").style.display='none';
+        document.getElementById("operator").style.display='none';
+        document.getElementById("cab").style.display='none';
+    function customer()
+    {
+        document.getElementById("proc").style.display='none';
+        document.getElementById("customer").style.display='block';
+        document.getElementById("bus").style.display='none';
+         document.getElementById("booking").style.display='none';
+         document.getElementById("operator").style.display='none';
+         document.getElementById("addnew").style.display='none';
+         document.getElementById("cab").style.display='none';
+
+    }
+    function bus()
+    {
+        document.getElementById("proc").style.display='none';
+        document.getElementById("booking").style.display='none';
+        document.getElementById("customer").style.display='none';
+        document.getElementById("bus").style.display='block';
+        document.getElementById("operator").style.display='none';
+        document.getElementById("addnew").style.display='none';
+        document.getElementById("cab").style.display='none';
+    }
+    function booking()
+    {
+         document.getElementById("proc").style.display='none';
+        document.getElementById("customer").style.display='none';
+        document.getElementById("bus").style.display='none';
+        document.getElementById("booking").style.display='block';
+        document.getElementById("operator").style.display='none';
+        document.getElementById("addnew").style.display='none';
+        document.getElementById("cab").style.display='none';
+    }
+
+    function addnew()
+    {
+        document.getElementById("proc").style.display='none';
+        document.getElementById("customer").style.display='none';
+        document.getElementById("bus").style.display='none';
+        document.getElementById("booking").style.display='none';
+        document.getElementById("addnew").style.display='block';
+        document.getElementById("operator").style.display='none';
+        document.getElementById("cab").style.display='none';
+    }
+
+    function operator()
+    {
+        document.getElementById("proc").style.display='none';
+        document.getElementById("customer").style.display='none';
+        document.getElementById("bus").style.display='none';
+        document.getElementById("booking").style.display='none';
+        document.getElementById("addnew").style.display='none';
+        document.getElementById("operator").style.display='block';
+        document.getElementById("cab").style.display='none';
+    }
+
+    function cabbook()
+    {
+        document.getElementById("proc").style.display='none';
+        document.getElementById("customer").style.display='none';
+        document.getElementById("bus").style.display='none';
+        document.getElementById("booking").style.display='none';
+        document.getElementById("addnew").style.display='none';
+        document.getElementById("operator").style.display='none';
+        document.getElementById("cab").style.display='block';
+    }
+</script>
+</body>
+</html>

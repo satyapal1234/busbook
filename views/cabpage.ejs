@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BUS BOOK</title>
+	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Googlefont-->
+   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+     <!--font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body
+        {
+          background-color: white
+        }
+        label
+        {
+          width: 200px;
+          font-weight: bold;
+        }
+
+  </style>
+</head>
+<body >
+
+<div class="prime-alert" >
+   <span class="prime-closebtn" onclick="this.parentElement.style.display='none';">×</span> 
+   <div style='padding: 0px 30px;'><a href="/abhiprime" class="join-now">Satya Tours & Travel</a>
+   <button class='btn btn-danger' style='background-color: rgb(255, 153, 51)'>Know More</button></div>
+</div>
+
+
+<section style='margin-top:0px;'>
+    <div class="container"  >
+
+       <nav class="navbar navbar-expand-lg navbar-light  " >  
+        <img src="tech.jpg" style="width: 100px;height: 100px;border-radius:50%;border: 1px solid gray"><em>Techniqa solution Ltd.</em>
+        <ul class="navbar-nav ml-auto" >
+          <% if(val!=1) {%>
+            <li class="nav-item" style="padding:10px 18px 18px 10px;" >
+                <a class="btn btn-success" href="/customer_login" style="color:white;padding:5px 30px;border-radius:20px;background-color: blue" data-toggle="modal" data-target="#myModal"><i class="fa fa-user"></i> Login</a>
+             </li>
+
+             <li class="nav-item" style="padding:10px 18px 18px 0px;" >
+                 <a class="btn btn-defalu"  href="/customer_register" style="color:white;padding:5px 30px;background-color:lightblue;border-radius:20px;">Register</a>
+             </li>
+
+          <% } else{%>  
+              <span class="navbar-text" style='margin-right: 20px;'>
+                 <div class="dropdown dropleft">
+                      <i class="fa fa-user  "  data-toggle="dropdown" style='font-size:48px;color:white;border:1px solid white;border-radius: 50%;padding:9px 9px;'></i>
+                           <div class="dropdown-menu" style='text-align: center'>
+                             <a class="dropdown-item" href="#"><%=name%></a>
+                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModalhistory">Order_History</a>
+                             <a class="dropdown-item" href="#">Preferences</a>
+                             <a class="dropdown-item" href="/logout">Logout</a>
+                           </div>
+                  </div>
+             </span>
+
+              <span class="navbar-text" style='margin-top: 20px'>
+                <a class="btn btn-defalu"  href="/customer_register" style="color:white;padding:5px 30px;background-color:rgb(204, 255, 153);border-radius:20px;">New User</a>
+              </span>
+
+          <% } %> 
+             
+         </ul>
+    </div>
+  
+</section>
+
+
+
+
+  <hr width="90%">
+
+
+
+
+
+
+
+<section class="container-fluid">
+ 
+        <a data-toggle="modal" data-target="#myModal" class='btn btn-primary' style='padding:5px 150px; color:white;font-weight: bold;background-color: rgb(0, 0, 102);'>BOOK NOW</a>
+   
+</section>
+
+<section  >
+ <div class="container-fluid"> 
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+     <ol class="carousel-indicators">
+     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+     </ol>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="cab2.jpg" class="d-block w-100" alt="...">
+    </div>
+
+    
+    
+   </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+   </div>
+
+    
+  <!--  <div style='top:220px;right:150px; font-weight:bold; position: fixed;padding: 2% 7%;background-color: lightblue'>
+        <div style='font-family: Courier New;font-weight: bold;font-size: 20px;'>Book Your Cab Now</div>
+        <form action='/bookcab' method='post'>
+          <label>Enter the date</label>
+          <input type="date" class='form-control'></br>
+
+          <label>Enter the time</label>
+          <input type="time" class='form-control'>
+        </form>
+    </div>  -->
+</div>
+</section>
+
+
+
+
+
+
+
+
+<section style='margin-top:20px;'>
+    <div class='container'>
+        <div class="row" style='color:black;'>
+
+            <div class='col-lg-4'>
+              <center>
+                 <div style='font-family: coiny;font-size: 20px;'>1000 Km</div>
+                 <div style='font-style: italic;font-size: 18px'>has been completed</div>
+              </center>
+            </div>
+
+            <div class='col-lg-4'>
+                <center>
+                 <div style='font-family: coiny;font-size: 20px;'>25k+</div>
+                  <div style='font-style: italic;font-size: 18px'>has been subscribed</div>
+              </center>
+            </div>
+
+            <div class='col-lg-4'>
+               <center>
+                 <div style='font-family: coiny;font-size: 20px;'>5 years</div>
+                  <div style='font-style: italic;font-size: 18px'>has been serviced</div>
+              </center>
+            </div>
+
+        </div>
+    </div>
+    <hr width="80%" color="black">
+</section>
+
+<section>
+  <center>
+    <img src="cab4.jpg" style='width:80%;height: 50%'>
+  </center>
+</section>
+  <hr width="90%" color="black">
+
+
+<section style='margin-top: 30px;' class='container'>
+     <div style='color: rgb(51, 102, 255); font-family: georgia;font-weight: bold;font-size: 25px;text-align: center;'>Our Services</div>
+      <hr width="50%" color="black">
+   </br>
+     <div style='font-weight: bold;'>Jamshedpur Service</div>
+     <em>Patna has an incredibly rich heritage and sits on the southern bank of the Ganga. There are a number of places with great religious importance and the city itself, once known as Patliputra, carries a huge spiritual legacy.</em>
+
+   </br></br>
+    <div style='font-weight: bold;'>Jamshedpur Outstation Service</div>
+     <em>You can hire Patna outstation taxi for a round trip or avail our one-way cabs on select routes. There are tons of great destinations near Patna including: Rajgir, Bodh Gaya, Muzaffarpur and Deoghar</em>
+</section>
+
+
+</br>
+</br>
+
+<section>
+  <center>
+    <div style="font-weight: bold;color:rgb(51, 102, 255);font-size: 30px;">What Sets Apart From Other</div>
+      <hr width="50%" color="black">
+    <img src="cab5.jpg" style='width:80%;height: 50%'>
+  </center>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+   <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Book your Cab Now</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="/bookyourcab" method='post'>
+             <label>From:---</label>
+            <input type="text" list="loc1" name="from" required autofocus />
+              <datalist id="loc1" >
+                <option value="nit jsr">nit jsr</option>
+                 <option value="gumla">gumla</option>
+                 <option value="mango">mango</option>
+                 <option value="tatanagar_jn">tatanagar_jn</option>
+                 <option value="bistupur">bistupur</option>
+                 <option value="sakshi">sakshi</option>
+             </datalist></br>
+
+
+              <label>To:---</label>
+            <input type="text" list="loc2" name="to" required autofocus/>
+              <datalist id="loc2" >
+                <option value="nit jsr">nit jsr</option>
+                 <option value="gumla">gumla</option>
+                 <option value="mango">mango</option>
+                 <option value="tatanagar_jn">tatanagar_jn</option>
+                 <option value="bistupur">bistupur</option>
+                 <option value="sakshi">sakshi</option>
+             </datalist></br>
+
+             <label>Enter The Date</label>
+             <input type="date" name="date" required autofocus></br>
+
+             <label>Enter The Time</label>
+             <input type="time" name="time" required autofocus></br>
+
+              <label>Enter Contact</label>
+             <input type="number" name="contact" required autofocus></br>
+             
+                <center><button class='btn btn-danger block' style='padding: 3px 150px;'>Book Now</button></center>
+             
+          </form>
+          </br>
+          <div style='color:rgb(0, 0, 102);text-align: center;'>You need to pay an advanced of 50Rs to book</div>
+        </div>
+        
+        <!-- Modal footer -->
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style='background-color: orange;margin-top:0px;padding: 10px 20px;'>
+  <div class="container">
+    
+      <div style="text-align: center;font-size: 30px;font-family: Courier New;font-weight: bold;">Wish you a Happy and Comfortable Journey</div>
+   
+  </div>
+</section>
+
+<%-include('footer')-%>
+
+</body>
+</html>

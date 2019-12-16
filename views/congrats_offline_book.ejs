@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>bus</title>
+     <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Googlefont-->
+   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+     <!--font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+   
+    <style>
+    	body
+    	{
+    		background-color:rgb(255, 255, 153);
+    	}
+    </style>
+  </head>
+
+<body>
+   <section>
+   	<center>
+       <center><img src="booked.png" style="height: 100px;widows: 100px;border-radius: 50%;border:1px solid green;"></center>
+       	<h1 style='font-size: 30px;'> Awesome</h1>
+          <div style="margin-top:20px;text-align:center;color:red;font-family: coiny;"><h4 style='font-size: 20px;color:green;font-family: Courier New;font-weight: bold;'> Congrats your booking has now confirmed</h4></div> <hr width="50%">
+           	<div id="contains">
+            <table>
+        	    <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>UserName</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= cuser%></td>
+
+        	   </tr>
+
+        	   <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>Arriving Station</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= cfrom%></td>
+
+        	   </tr>
+
+        	   <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>Departure Station</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= cto%></td>
+
+        	   </tr>
+
+        	    <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>No of window seat</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= cwindows%></td>
+
+        	   </tr>
+
+        	   <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>No of sleeper seat</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= csleeper%></td>
+
+        	   </tr>
+
+        	    <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>Non window seat</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= price%></td>
+
+        	   </tr>
+
+        	   <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>Bus Name</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= cbusname%></td>
+
+        	   </tr>
+
+        	    <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>Contact</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= ccontact%></td>
+
+        	   </tr>
+
+        	   <tr>
+        	    	<td style='padding:10px 40px;color:red;font-weight:bold;font-family: Courier New;text-align: justify;'>Payable Amount</td>
+        		    <td style='padding:10px 20px;color:blue;text-transform: uppercase;font-weight: bold;font-family: Courier New;'><%= price%></td>
+
+        	   </tr>
+
+
+          </table>
+      </div>
+      </center> 
+        	<center>
+        		  <button class='btn btn-success' onclick='takeScreenShot()' style='padding: 10px 20px;border-radius:30px;background-color: green;color:white;'>Take Screenshot</button>
+        	</center>
+           
+         
+   </section>
+
+
+
+
+
+
+
+<script>
+    var takeScreenShot = function() {
+    html2canvas(document.getElementById("contains"), {
+        onrendered: function (canvas) {
+        	alert("sfds");
+            var tempcanvas=document.createElement('canvas');
+            tempcanvas.width=1000;
+            tempcanvas.height=600;
+            var context=tempcanvas.getContext('2d');
+            context.drawImage(canvas,0,0,850,400,-50,100,800,400);
+            var link=document.createElement("a");
+            link.href=tempcanvas.toDataURL('image/jpg');   //function blocks CORS
+            link.download = 'billing.jpg';
+            link.click();
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>

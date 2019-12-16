@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BUS BOOK</title>
+  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Googlefont-->
+   <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+     <!--font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+     
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+
+<body>
+    
+    <section>
+   <div class="container"  >
+       <nav class="navbar navbar-expand-lg navbar-light  " >
+            <img id="ig" src="logo.png" style="height: 75px;border-radius: 50%;">
+                <a class="navbar-brand" href="#" style="font-size:2.0rem; color:white;font-family: coiny;" >Tours & Travels</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo2">
+                 <span class="navbar-toggler-icon"></span>
+                 </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo2" style='font-family:Courier New;font-weight:bold;font-size:20px;'>
+                      <ul class="navbar-nav ml-auto" >
+                            <li class="nav-item" style="padding:10px 18px 18px 0px;" >
+                                 <a class="nav-link" href="/" style="color:white;">Home</a>
+                            </li>
+                             
+                             <li class="nav-item" style="padding:10px 18px 18px 0px;" >
+                                 <a class="nav-link" href="/about" style="color:white;">About Us</a>
+                            </li>
+
+                             <li class="nav-item" style="padding:10px 18px 18px 0px;" >
+                                 <a class="nav-link" href="/contact" style="color:white;">Contact</a>
+                            </li>
+
+                             <li class="nav-item" style="padding:10px 18px 18px 0px;" >
+                                 <a class="nav-link" href="/cabpage" style="color:white;">Cab_Book</a>
+                            </li>
+
+                             <li class="nav-item" style="padding:10px 18px 18px 0px;" >
+                                 <a class="nav-link" href="/services" style="color:white;">Services</a>
+                            </li>
+                                  
+                                   
+                                 </ul>
+                           </div>
+                   </nav>
+     </div>
+
+
+</section>
+
+
+
+<section id='emailnotice' style='margin-top: 20px;'>
+    <div style="width:80%; margin:0 auto;background-color:rgb(255, 153, 0);padding: 10px 20px ">
+        <div class='veri-notice'>Login Operators</div><hr width="75%">
+        <div id='info'>Satya Tours & Travels welcomes you on joining with us. </div>
+        <div id='info'>This page is only use for Admin or operators .User donot try to render to touch this page otherwise your account will be closed
+        
+       </div></br>
+       <div id='info' style='font-weight: bold;'>Plz enter valid details </div>
+      </br></br>
+      <center>
+       <form >
+         <input class='input-field' type="email" name="email" id="email" style="width:50%" placeholder="enter registered email" required autofocus>
+         <input class='input-field' type="password" name="password" id="password" style="width:50%" placeholder="enter your password" required autofocus>
+         <center>
+            <button type="submit" class='btn btn-primary' style='padding: 2px 40px;background-color:rgb(51, 153, 255);color:white;font-weight:bold;' onclick="operatorLogin()" >Login</button>
+            <a class='btn btn-primary' style='padding: 2px 40px;background-color: rgb(0, 0, 204);color:white;font-weight:bold;' href='/'>back</button></a>
+       </form>
+      </center>
+      
+       
+    </div>
+</section>
+
+
+
+
+
+
+<script>
+
+  function operatorLogin(){
+  email=$("#email").val();
+  password=$("#password").val();
+
+  $.post('/operatorLogin',{email:email,password:password},function(data){
+       if(data==='prince')
+       {
+          window.location.href='/princetravelTask';
+       }
+       else if(data==='nilanchal')
+       {
+           window.location.href='/nilanchaltravelTask';
+       }
+
+       else if(data==='maharaja')
+       {
+           window.location.href='/maharajatravelTask';
+       }
+
+       else if(data==='ratnagiri')
+       {
+          window.location.href='/ratnagiritravelTask';
+       }
+
+       else if(data==='notfound')
+       {
+          alert('no user exist with such data');
+          return false;
+       }
+  })
+
+ }
+</script>
+
+</body>
+</html>

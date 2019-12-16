@@ -1,0 +1,338 @@
+
+.prime-alert
+ { padding: 10px; 
+	background:url('//static.abhibus.com/abhiprime/bg-top.jpg') no-repeat;
+	color: #000; 
+	text-align: center;
+	font-size: 14px;
+	z-index: 9;
+	position: relative;
+	    height:48px;
+ }
+.prime-closebtn { 
+	  margin-left: 15px; 
+	  color: #000;
+	  font-weight: bold;
+	  float: right; 
+	  font-size: 22px; 
+	  line-height: 38px; 
+	  cursor: pointer; 
+	  transition: 0.3s;}
+.prime-closebtn:hover
+ { 
+ 	color: black;
+ }
+
+ .join-now
+ {
+ 	font-family: Courier New;
+ 	font-weight: bold;
+ 	font-size:20px;
+ 	color:white;
+ 	padding:2% 5%;
+ }
+
+
+
+.home_page_top_section
+
+{
+	background-image: url('three.jpg');
+   margin-top: 0px;
+  background-position: center center;
+   background-repeat: no-repeat;
+   padding: 7% 13%;
+   
+}
+
+
+
+.wrap
+{
+	padding: 2% 7%;
+	font-weight: bold;
+	color:white;
+	font-family: Courier New;
+	background: rgba(0,0,0,.5);
+}
+.li
+{
+	padding: 2% 7%;
+}
+
+#log
+{
+	margin-right: 10px
+}
+.head-card
+{
+	font-family: Courier New;
+	font-weight: bold;
+	font-size:30px;
+	color:blue;
+	padding:2% 4%;
+	text-align: center;
+
+}
+
+.fl
+{
+	display: inline;
+}
+.sl
+{
+	font-weight: bold;
+	font-size: 30px;
+	font-family: georgia;
+	padding: 10px 20px;
+}
+.timesubmain
+{
+	border:1px solid lightgreen;
+	padding: 10px 20px;
+}
+.titl_hero
+{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}
+
+#rotate{
+    animation-name:            rotate; 
+    animation-duration:        4s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#exp
+{
+	font-family: Courier New;
+	font-weight: bold;
+}
+.rev
+{
+	font-weight: bold;
+	font-size: 30px;
+	font-family: georgia;
+	color:rgb(255, 153, 0);
+	margin-top:30px;
+	padding: 1% 5%;
+	text-decoration: underline;
+}
+.reiviewheadmain
+{
+	color:white;
+
+}
+
+.media-heading
+{
+	padding: 10px 20px;
+}
+.p
+{
+	padding: 5px 10px;
+	font-family: Courier New;
+}
+.media
+{
+	padding: 10px 20px;
+}
+
+
+.about-page-top-section
+{
+	background-color:rgb(0, 51, 0);
+}
+.about-wrap
+{
+	font-family: coiny;
+	font-style: italic;
+	
+	background: rgba(0,0,0,.5);
+	text-align: center;
+	color:white;
+
+}
+
+.customer-support
+{
+	font-weight: bold;
+	font-family: Courier New;
+	color:rgb(204, 255, 51);
+	font-size: 30px;
+}
+
+.contact-head
+{
+	color:lightgreen;
+	font-family: georgia;
+	font-weight: bold;
+	font-size: 25px;
+}
+#btn1
+{
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: green;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid green;
+}
+#btn2
+{
+	font-family: Courier New;
+	font-weight: bold;
+	background-color: lightgreen;
+	border-radius: 15px;
+	padding: 10px 25px;
+	text-align: center;
+}
+
+#modal1
+{
+	font-family: Courier New;
+	font-style: italic;
+	font-weight: bold;
+	color:red;
+}
+
+#label
+{
+	font-weight: bold;
+	color:green;
+}
+.veri-notice
+{
+	text-align: center;
+	color:black;
+	font-family: Courier New;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px 40px;
+}
+#info
+{
+	color:black;
+	font-family: georgia;
+	font-size:15px;
+	
+	text-align: center;
+}
+
+.route
+{
+	font-family: cursive;
+	font-weight: bold;
+	color:white;
+	text-align: center;
+	font-size: 20px;
+}
+
+#route-name
+{
+	font-family: Courier New;
+	font-weight: bold;
+	color:white;
+	padding:2% 7%;
+	margin-left: 20px;
+}
+#jsr-bxr-head
+{
+	color:rgb(51, 51, 0);
+	font-family: Courier New;
+	
+	font-size: 35px;
+	padding: 10px 20px;
+	font-weight: bold;
+	text-align: center;
+}
+.bus-name
+{
+	font-weight: bold;
+	color:red;
+	font-size:25px;
+	font-family: Courier New;
+	
+}
+#bus-feature-ul:hover
+{
+	
+	
+}
+.info-bus
+{
+	font-weight: bold;
+	font-family: Courier New;
+	padding: 5px 10px;
+}
+
+.bus-name-seat
+{
+	font-weight: bold;
+	text-align: center;
+	font-family:Courier New;
+	color:rgb(0, 51, 0);
+	font-size:35px;
+	letter-spacing: 0px;
+}
+.status
+{
+	color:black;
+	font-weight: bold;
+	font-style: italic;
+}
+.inst-head
+{
+	font-weight: bold;
+	text-align: center;
+	font-family: georgia;
+	color:white;
+	padding: 10px 20px;
+	font-size:20px;
+}
+.inst-head-info
+{
+	color:white;
+	text-align: justify;
+
+	font-style: italic;
+}
+.add-head-head
+{
+	text-align: center;
+	font-weight: bold;
+	font-size:30px;
+	
+	font-family: Courier New;
+}
